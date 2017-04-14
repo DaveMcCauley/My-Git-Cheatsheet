@@ -76,4 +76,29 @@ git checkout <sha-commit>
 git branch <new-branch>
 ```
 
+## Commits
+#### Basics
+```html
+git reset <las-good-sha>            # undo all commits, but perserves local changes
+git reset --hard <last-good-sha>    # like it never happened
+git reset --soft <origin>/<master>  # rollback to same commit as origin/master
+                                      but keep changes and moves files to staging
+                              
+git checkout -- <file-name>         # discard changes to the last commited state
+
+# git reset, git checkout can undo the undo from above.
+```
+Committed on the wrong branch (not pushed)
+```html
+git reset --soft HEAD~1
+git checkout <desired-branch>
+git commit 
+```
+
+Changes (not committed) on wrong branch
+```html
+git checkout -b <new-branch>    # keeps working changes
+-or-
+git checkout <exiting-branch>   # keeps working changes
+```
 
