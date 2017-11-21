@@ -23,7 +23,9 @@ git pull --rebase  # avoids merge, destroys any local changes
 
 git push
 git push -u <remote> <branch>
+  
 ```
+
 Rename a branch on a remote
 ```html
 git branch -m <old-branch> <new-branch>       # rename the branch
@@ -33,6 +35,13 @@ git push --set-upstream <remote> <new-branch> # creates and tracks remote
 # each remote...
   git fetch origin         # fetches new branch
   git remote prune origin  # clears out the unused-
+```
+
+Delete a remote branch
+
+```html
+For example: git branch --delete origin fix/authentication
+git push --delete <remote> <branch>.
 ```
 
 ## Branches
