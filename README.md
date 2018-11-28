@@ -111,3 +111,19 @@ git checkout -b <new-branch>    # keeps working changes
 git checkout <exiting-branch>   # keeps working changes
 ```
 
+## Tags
+
+#### Renaming
+Rename ```old``` tag to ```new```
+
+```html
+git tag new old
+git tag -d old
+git push origin :refs/tags/old
+git push --tags
+```
+Finally, make sure that the other users remove the deleted tag. Please tell them (co-workers) to run the following command:
+```html
+git pull --prune --tags
+```
+
