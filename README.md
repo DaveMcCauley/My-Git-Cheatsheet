@@ -127,3 +127,15 @@ Finally, make sure that the other users remove the deleted tag. Please tell them
 git pull --prune --tags
 ```
 
+Delete tag off remote
+
+You just need to push an 'empty' reference to the remote tag name:
+
+git push origin :tagname
+Or, more expressively, use the --delete option (or -d if your git version is older than 1.8.0):
+
+git push --delete origin tagname
+If you also need to delete the local tag, use:
+
+git tag --delete tagname
+
